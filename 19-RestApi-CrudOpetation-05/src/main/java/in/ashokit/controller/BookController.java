@@ -26,9 +26,10 @@ public class BookController {
 
 	@PostMapping("/book")
 	public ResponseEntity<String> insertBookData(@RequestBody Book book) {
+		System.out.println("ganesh changes");
 
 		String msg = bookServiceImpl.upsertData(book);
-
+		System.out.println("ganesh changes");
 		return new ResponseEntity<String>(msg, HttpStatus.CREATED);
 	}
 
